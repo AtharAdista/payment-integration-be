@@ -57,4 +57,5 @@ jobs:
               -e XENDIT_API_KEY=${{ secrets.XENDIT_API_KEY }} \
               -e SECRET_KEY=${{ secrets.SECRET_KEY}} \
               -e PORT=${{ secrets.PORT}} \
+              -e ENV=${{secrets.ENV}}
               ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}

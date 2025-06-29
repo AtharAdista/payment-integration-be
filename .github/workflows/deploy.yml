@@ -51,7 +51,7 @@ jobs:
             docker run -d --restart unless-stopped --name my-go-app -p 80:8080 \
               -e DB_HOST=${{ secrets.DB_HOST }} \
               -e DB_USER=${{ secrets.DB_USER }} \
-              -e DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+              -e DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
               -e DB_NAME=${{ secrets.DB_NAME }} \
               -e DB_PORT=${{ secrets.DB_PORT}} \
               -e XENDIT_API_KEY=${{ secrets.XENDIT_API_KEY }} \

@@ -6,7 +6,8 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
-RUN go build -o main ./cmd/myapp
+
+RUN CGO_ENABLED=0 GOOS=linux go build -o main ./cmd/myapp
 
 FROM alpine
 WORKDIR /app

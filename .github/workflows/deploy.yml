@@ -27,6 +27,7 @@ jobs:
 
       - name: Build and Push Image
         run: |
+          ls -l go.*
           docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }} .
           docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
 

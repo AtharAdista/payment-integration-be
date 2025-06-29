@@ -105,7 +105,7 @@ func CreateInvoice(req *model.SubscriptionPaymentReq) (*invoice.Invoice, error) 
 	createInvoiceRequest.SetPaymentMethods([]string{"CREDIT_CARD", "DEBIT_CARD"})
 	createInvoiceRequest.SetInvoiceDuration(3600)
 	createInvoiceRequest.SetDescription(req.PaymentRequest.Description)
-	createInvoiceRequest.SetSuccessRedirectUrl("http://localhost:5173/")
+	createInvoiceRequest.SetSuccessRedirectUrl(os.Getenv("FE_LINK"))
 
 	resp, _, err := xenditClient.InvoiceApi.CreateInvoice(context.Background()).
 		CreateInvoiceRequest(createInvoiceRequest).

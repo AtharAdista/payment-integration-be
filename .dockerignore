@@ -1,33 +1,27 @@
+# Umum
 node_modules
 dist
 build
+bin/
+coverage
+*.log
+*.test.js
+*.spec.js
 .vite
 .next
 .expo
 .expo-shared
 
-Dockerfile
-.dockerignore
-.git
-.gitignore
-.env
-.env.local
-.env.*.local
-
+# IDE & Editor
 .vscode
 .idea
 *.swp
 .DS_Store
 Thumbs.db
 
-coverage
-*.log
-*.test.js
-*.spec.js
-
-*.exe
-*.out
-*.test
-*.mod
-*.sum
-bin/
+# Git & Env
+.git
+.gitignore
+.env
+.env.local
+.env.*.local
